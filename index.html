@@ -9,7 +9,8 @@
                 var filePath = 'test.xml'; // GIVE FULL WEB URL IN YOUR CASE;
                 $.get(filePath,function(response){
                     var content = '<ul>';
-                    $.parseXML(response).find('CD').each(function(item) {
+                    $(response).find('CD').each(function(item) {
+                        
                         content+= '<li>';
                         content+= $(this).find('TITLE').text()+'<br/>';
                         content+= $(this).find('ARTIST').text()+'<br/>';
